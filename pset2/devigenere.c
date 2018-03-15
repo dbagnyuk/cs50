@@ -50,7 +50,7 @@ int main (int argc, string argv[])
         }
         len_str++;
     }
-        printf ("\n");
+    printf ("\n");
 }
 
 char Decrypt (int Key, int Letter)
