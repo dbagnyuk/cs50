@@ -130,7 +130,6 @@ int main(void)
     while (lives > 0 && bricks > 0)
     {
         // TODO
-
         // follow mouse forever
         // check for mouse event
         GEvent event = getNextEvent(MOUSE_EVENT);
@@ -178,6 +177,7 @@ int main(void)
                 ++points;
                 updateScoreboard(window, labelPoints, points);
                 updateScoreboard(window, labelBricks, bricks);
+                // when left no brick end the game
                 if (bricks == 0)
                 {
                     removeGWindow(window, paddle);
@@ -185,6 +185,7 @@ int main(void)
                     GLabel winString = initWinStringPoints(window);
                     //waitForClick();
                 }
+                // when brake the brick do ball little faster
                 velocityY = velocityY * 1.01;
                 velocityX = velocityX * 1.01;
             }
@@ -229,6 +230,7 @@ int main(void)
                 GLabel overString = initOverStringPoints(window);
                 //waitForClick();
             }
+            // when loose the ball do next ball faster
             velocityY = velocityY * 1.15;
             velocityX = velocityX * 1.15;
         }
@@ -251,6 +253,7 @@ int main(void)
 void initBricks(GWindow window)
 {
     // TODO
+    // create line of bricks with random colors
     int gap = 4;
     int x = (WIDTH - ((BRICKS_WIDTH * COLS) + ((COLS - 1) * gap))) / 2;
     int y = x, c;
@@ -344,6 +347,7 @@ GLabel initScoreboardPoints(GWindow window)
     GLabel label = newGLabel(" ");
     setFont(label, "SansSerif-28");
     setColor(label, "GRAY");
+
     // instantiate sign
     GLabel sign = newGLabel("Score");
     setFont(sign, "SansSerif-14");
@@ -354,6 +358,7 @@ GLabel initScoreboardPoints(GWindow window)
     double y = (getHeight(window) - getHeight(label)) / 2;
     setLocation(label, x, y);
     add(window, label);
+
     // center sign in window
     double xx = (getWidth(window) - getWidth(sign)) / 2;
     double yy = ((getHeight(window) - getHeight(sign)) / 2) - getHeight(label);
@@ -370,6 +375,7 @@ GLabel initScoreboardBricks(GWindow window)
     GLabel label = newGLabel(" ");
     setFont(label, "SansSerif-24");
     setColor(label, "GRAY");
+    
     // instantiate sign
     GLabel sign = newGLabel("Bricks");
     setFont(sign, "SansSerif-14");
@@ -380,6 +386,7 @@ GLabel initScoreboardBricks(GWindow window)
     double y = (getHeight(window) - getHeight(label)) / 2;
     setLocation(label, x, y);
     add(window, label);
+    
     // center sign in window
     double xx = 1;
     double yy = ((getHeight(window) - getHeight(sign)) / 2) - getHeight(label);
@@ -406,6 +413,7 @@ GLabel initScoreboardLives(GWindow window)
     double y = (getHeight(window) - getHeight(label)) / 2;
     setLocation(label, x, y);
     add(window, label);
+    
     // center sign in window
     double xx = (getWidth(window) - getWidth(sign));
     double yy = ((getHeight(window) - getHeight(sign)) / 2) - getHeight(label);
