@@ -8,8 +8,8 @@ int main(void)
     
     do
     {
-    printf("How much change is owed? ");
-    m = GetFloat();
+        printf("How much change is owed? ");
+        m = GetFloat();
     }
     while (m <= 0);
 
