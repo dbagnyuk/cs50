@@ -50,7 +50,7 @@ int main (int argc, string argv[])
         }
         len_str++;
     }
-        printf ("\n");
+    printf ("\n");
 }
 
 char Crypt (int Key, int Letter)
