@@ -2,7 +2,7 @@
  * speller.c
  *
  * Computer Science 50
- * Problem Set 6
+ * Problem Set 5
  *
  * Implements a spell-checker.
  ***************************************************************************/
