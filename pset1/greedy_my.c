@@ -8,9 +8,9 @@ int main(void)
     
     do
     {
-    printf("How much change is owed? ");
-    m = GetFloat();
-    // printf("%f\n", m);
+        printf("How much change is owed? ");
+        m = GetFloat();
+        // printf("%f\n", m);
     }
     while (m <= 0);
 
@@ -53,5 +53,5 @@ int main(void)
     }
 
     printf("You need %d coins from:\n", i);
-    printf("25¢ - %d, 10¢ - %d, 5¢ - %d, 1¢ - %d\n", di,ci,bi,ai);
+    printf("25¢ - %d, 10¢ - %d, 5¢ - %d, 1¢ - %d\n", di, ci, bi, ai);
 }
