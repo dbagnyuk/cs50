@@ -2,4 +2,3 @@
 # Provided by prometheus.org.ua
 # https://edx.prometheus.org.ua/courses/Prometheus/CS50/2016_T1/info
 
-# exercises for cource
