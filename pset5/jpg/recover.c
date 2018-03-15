@@ -2,7 +2,7 @@
  * recover.c
  *
  * Computer Science 50
- * Problem Set 4
+ * Problem Set 5
  *
  * Recovers JPEGs from a forensic image.
  */
