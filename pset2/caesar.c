@@ -31,7 +31,7 @@ int main (int argc, string argv[])
         }
         length++;
     }
-        printf ("\n");
+    printf ("\n");
 }
 
 char Crypt (int Key, int Letter)
